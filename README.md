@@ -1,1 +1,1 @@
-# carMax
+carMax is an app that aims for optimizing people's daily transportation. It is a mix of Uber and Airbnb by listing out each driver's future time availabity for passengers to reserve. This app maximized time efficiency for both drivers and passengers. Drivers don't need to roam around city purposelessly, while passengers don't need to wait for a cab timelessly.
