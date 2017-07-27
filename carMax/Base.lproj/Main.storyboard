@@ -123,10 +123,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8z1-W8-0pg">
-                                <rect key="frame" x="79" y="444" width="257" height="83"/>
+                                <rect key="frame" x="79" y="414" width="257" height="124"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Sign Up Now!"/>
+                                <connections>
+                                    <action selector="registerUser:" destination="YGJ-u7-vjG" eventType="touchUpInside" id="wsc-Ej-LAj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -141,10 +144,37 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="919.56521739130437"/>
         </scene>
+        <!--Schedule View Controller-->
+        <scene sceneID="IoI-77-oc2">
+            <objects>
+                <viewController storyboardIdentifier="SVC" id="AaV-G5-vvR" customClass="ScheduleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mN3-bn-hts"/>
+                        <viewControllerLayoutGuide type="bottom" id="pB4-Rb-dxa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Akm-fO-df9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HEY!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVi-AF-EpT">
+                                <rect key="frame" x="112" y="328" width="190" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q55-mw-Uo0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1862.3188405797102" y="918.75000000000011"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="Sgm-WL-eVX">
             <objects>
-                <viewController id="efx-pS-Cyi" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" id="efx-pS-Cyi" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c6N-tf-LWD"/>
                         <viewControllerLayoutGuide type="bottom" id="8po-Rm-V6I"/>
@@ -185,6 +215,9 @@
                                 <rect key="frame" x="113" y="482" width="189" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start!"/>
+                                <connections>
+                                    <action selector="login:" destination="efx-pS-Cyi" eventType="touchUpInside" id="w7z-ya-rDf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

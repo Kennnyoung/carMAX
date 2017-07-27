@@ -8,11 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "SignupViewController.h"
+#import "KeychainItemWrapper.h"
 
 @interface SignupViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *passWord;
 @property (weak, nonatomic) IBOutlet UITextField *emailAddress;
+
+- (IBAction)registerUser:(id)sender;
 
 @end
 
@@ -53,4 +56,18 @@
 }
 
 
+- (IBAction)registerUser:(id)sender {
+    
+    KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:_userName.text accessGroup:nil];
+    
+    [keychainItem setObject:_passWord.text forKey:(__bridge id)kSecValueData];
+    [keychainItem setObject:_userName.text forKey:(__bridge id)kSecAttrAccount];
+    
+    NSUserDefaults *emails = [NSUserDefaults standardUserDefaults];
+    [emails setObject:_emailAddress.text forKey:_userName.text];
+    
+    LoginViewController *lvc = [self.storyboard instantiateViewControllerWithIdentifier:@"login"];
+    
+    [self.navigationController pushViewController:lvc animated:YES];
+}
 @end

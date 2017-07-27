@@ -6,6 +6,7 @@
 //  Copyright © 2017 Modiface Inc. All rights reserved.
 //
 #import <UIKit/UIKit.h>
+#import "LoginViewController.h"
 
 #ifndef SignupViewController_h
 #define SignupViewController_h

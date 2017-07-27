@@ -6,6 +6,7 @@
 //  Copyright © 2017 Modiface Inc. All rights reserved.
 //
 #import <UIKit/UIKit.h>
+#import "ScheduleViewController.h"
 
 #ifndef LoginViewController_h
 #define LoginViewController_h
