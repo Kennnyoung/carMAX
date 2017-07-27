@@ -14,7 +14,7 @@
 #endif /* LoginViewController_h */
 
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController <UITextFieldDelegate>
 
 
 @end

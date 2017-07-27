@@ -14,6 +14,7 @@
 		6613301A1F1E73A2004DFE24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 661330191F1E73A2004DFE24 /* Assets.xcassets */; };
 		6613301D1F1E73A2004DFE24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6613301B1F1E73A2004DFE24 /* LaunchScreen.storyboard */; };
 		661330251F1E988E004DFE24 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 661330241F1E988E004DFE24 /* LoginViewController.m */; };
+		66C9B4121F2A4D8100CFE686 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C9B4111F2A4D8100CFE686 /* SignupViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		6613301E1F1E73A2004DFE24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		661330241F1E988E004DFE24 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		661330261F1E98A7004DFE24 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		66C9B4101F2A4D6800CFE686 /* SignupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
+		66C9B4111F2A4D8100CFE686 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,8 @@
 				661330131F1E73A2004DFE24 /* ViewController.h */,
 				661330141F1E73A2004DFE24 /* ViewController.m */,
 				661330161F1E73A2004DFE24 /* Main.storyboard */,
+				66C9B4101F2A4D6800CFE686 /* SignupViewController.h */,
+				66C9B4111F2A4D8100CFE686 /* SignupViewController.m */,
 				661330261F1E98A7004DFE24 /* LoginViewController.h */,
 				661330241F1E988E004DFE24 /* LoginViewController.m */,
 				661330191F1E73A2004DFE24 /* Assets.xcassets */,
@@ -160,6 +165,7 @@
 				661330151F1E73A2004DFE24 /* ViewController.m in Sources */,
 				661330121F1E73A2004DFE24 /* AppDelegate.m in Sources */,
 				6613300F1F1E73A2004DFE24 /* main.m in Sources */,
+				66C9B4121F2A4D8100CFE686 /* SignupViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +326,7 @@
 				661330231F1E73A2004DFE24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

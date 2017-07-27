@@ -1,21 +1,22 @@
 //
-//  LoginViewController.m
+//  SignupViewController.m
 //  carMax
 //
-//  Created by Yuhao Kan on 2017-07-18.
+//  Created by Yuhao Kan on 2017-07-27.
 //  Copyright © 2017 Modiface Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "LoginViewController.h"
+#import "SignupViewController.h"
 
-@interface LoginViewController ()
+@interface SignupViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *passWord;
+@property (weak, nonatomic) IBOutlet UITextField *emailAddress;
 
 @end
 
-@implementation LoginViewController
+@implementation SignupViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,17 +28,22 @@
     
     [_userName setDelegate:self];
     [_passWord setDelegate:self];
+    [_emailAddress setDelegate:self];
+
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 -(void)dismissKeyboard {
+    
     [_userName resignFirstResponder];
     [_passWord resignFirstResponder];
+    [_emailAddress resignFirstResponder];
+    
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -45,5 +51,6 @@
     [textField resignFirstResponder];
     return YES;
 }
+
 
 @end
