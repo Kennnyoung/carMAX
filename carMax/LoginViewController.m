@@ -13,7 +13,9 @@
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *passWord;
-
+@property NSString *alertTitle;
+@property NSString *alertMsg;
+@property BOOL alert;
 - (IBAction)login:(id)sender;
 @end
 
@@ -29,6 +31,8 @@
     
     [_userName setDelegate:self];
     [_passWord setDelegate:self];
+    _passWord.secureTextEntry = YES;
+    self.alert = NO;
 }
 
 
@@ -55,14 +59,29 @@
     NSString *password = [[NSString alloc] initWithData:pwData encoding:NSUTF8StringEncoding];
     NSString *username = [keychainItem objectForKey:(__bridge id)kSecAttrAccount];
     
-    if ([password isEqualToString: _passWord.text] && [username isEqualToString: _userName.text]){
+    if ([_passWord.text isEqualToString:@""] || [_userName.text isEqualToString:@""]){
+        
+        self.alertTitle = @"Empty Credentials";
+        self.alertMsg = @"Please enter both username and password";
+        self.alert = YES;
+    }
+    
+    else if ([password isEqualToString: _passWord.text] && [username isEqualToString: _userName.text]){
         ScheduleViewController *svc = [self.storyboard instantiateViewControllerWithIdentifier:@"SVC"];
         
         [self.navigationController pushViewController:svc animated:YES];
     }else{
         
-        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Wrong Credentials"
-                                                                       message:@"Please try again"
+        self.alertTitle = @"Wrong Credentials";
+        self.alertMsg = @"Please try again";
+        self.alert = YES;
+        
+    }
+    
+    if (self.alert){
+        
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:self.alertTitle
+                                                                       message:self.alertMsg
                                                                 preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
@@ -70,9 +89,10 @@
         
         [alert addAction:defaultAction];
         [self presentViewController:alert animated:YES completion:nil];
-
         
     }
+    
+    self.alert = NO;
     
     
 }
