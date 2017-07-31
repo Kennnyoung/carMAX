@@ -14,7 +14,7 @@
 
 #endif /* SignupViewController_h */
 
-@interface SignupViewController : UIViewController <UITextFieldDelegate>
+@interface SignupViewController : UIViewController <UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
 
 
 @end

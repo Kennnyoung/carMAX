@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -123,7 +124,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8z1-W8-0pg">
-                                <rect key="frame" x="79" y="414" width="257" height="124"/>
+                                <rect key="frame" x="79" y="535" width="257" height="124"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Sign Up Now!"/>
@@ -131,12 +132,24 @@
                                     <action selector="registerUser:" destination="YGJ-u7-vjG" eventType="touchUpInside" id="wsc-Ej-LAj"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cYL-zW-BYr">
+                                <rect key="frame" x="150" y="365" width="244" height="83"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmV-05-og7">
+                                <rect key="frame" x="41" y="384" width="101" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="emailAddress" destination="BoR-Ol-WxV" id="Oii-CA-fEX"/>
                         <outlet property="passWord" destination="a0h-sr-Qes" id="gtc-7J-A2D"/>
+                        <outlet property="status" destination="cYL-zW-BYr" id="rvc-wq-y4t"/>
                         <outlet property="userName" destination="YoR-rN-aGt" id="7DZ-mc-Bx1"/>
                     </connections>
                 </viewController>
@@ -156,16 +169,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGL-Zc-VIu">
-                                <rect key="frame" x="20" y="50" width="374" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGL-Zc-VIu">
+                                <rect key="frame" x="20" y="50" width="374" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="I9L-21-e5b"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="FEY-Pi-xCG">
+                                <rect key="frame" x="0.0" y="236" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="523210280.691118">
+                                    <!--2017-07-31 16:11:20 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vGL-Zc-VIu" firstAttribute="top" secondItem="mN3-bn-hts" secondAttribute="bottom" constant="30" id="VNE-Zh-vws"/>
+                            <constraint firstItem="vGL-Zc-VIu" firstAttribute="leading" secondItem="Akm-fO-df9" secondAttribute="leadingMargin" id="Wrj-xj-9zJ"/>
+                            <constraint firstItem="vGL-Zc-VIu" firstAttribute="trailing" secondItem="Akm-fO-df9" secondAttribute="trailingMargin" id="sZP-i5-hCf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="month" destination="vGL-Zc-VIu" id="tdz-Vm-MjA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q55-mw-Uo0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
