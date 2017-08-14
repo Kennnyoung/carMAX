@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Appdata.h"
 #import "LoginViewController.h"
 #import "KeychainItemWrapper.h"
 
@@ -68,7 +69,7 @@
     
     else if ([password isEqualToString: _passWord.text] && [username isEqualToString: _userName.text]){
         ScheduleViewController *svc = [self.storyboard instantiateViewControllerWithIdentifier:@"SVC"];
-        
+        [AppData sharedData].currentUser = username;
         [self.navigationController pushViewController:svc animated:YES];
     }else{
         

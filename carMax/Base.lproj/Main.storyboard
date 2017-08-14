@@ -169,37 +169,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGL-Zc-VIu">
-                                <rect key="frame" x="20" y="30" width="374" height="51"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="51" id="I9L-21-e5b"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Hp1-4Q-Xa5">
                                 <rect key="frame" x="20" y="96" width="375" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywq-qO-ACv">
                                         <rect key="frame" x="0.0" y="0.0" width="71.666666666666671" height="70"/>
                                         <state key="normal" title="Button" image="1st"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="FhN-pa-8Iw"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyj-dL-UHa">
                                         <rect key="frame" x="75.666666666666657" y="0.0" width="71.999999999999972" height="70"/>
                                         <state key="normal" title="Button" image="2nd"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="Thm-FD-nIX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njp-77-rUD">
                                         <rect key="frame" x="151.66666666666666" y="0.0" width="71.666666666666686" height="70"/>
                                         <state key="normal" title="Button" image="3rd"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="uhh-Qm-Hyn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifd-Ep-Fgi">
                                         <rect key="frame" x="227.33333333333331" y="0.0" width="71.999999999999943" height="70"/>
                                         <state key="normal" title="Button" image="4th"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="ufZ-oF-jwT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEK-XT-T57">
                                         <rect key="frame" x="303.33333333333326" y="0.0" width="71.666666666666686" height="70"/>
                                         <state key="normal" title="Button" image="5th"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="ho9-0o-UQa"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -213,22 +219,37 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWu-lB-Z1C">
                                         <rect key="frame" x="0.0" y="0.0" width="71.666666666666671" height="70"/>
                                         <state key="normal" title="Button" image="6th"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="ZJP-Im-8xY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qj6-FP-mHm">
                                         <rect key="frame" x="75.666666666666657" y="0.0" width="71.999999999999972" height="70"/>
                                         <state key="normal" title="Button" image="7th"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="5KH-Yw-CnC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgG-Cm-87s">
                                         <rect key="frame" x="151.66666666666666" y="0.0" width="71.666666666666686" height="70"/>
                                         <state key="normal" title="Button" image="8th"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="yIa-fn-Lri"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bv1-w7-1Fr">
                                         <rect key="frame" x="227.33333333333331" y="0.0" width="71.999999999999943" height="70"/>
                                         <state key="normal" title="Button" image="9th"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="S6w-8U-keX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wW-0M-MS0">
                                         <rect key="frame" x="303.33333333333326" y="0.0" width="71.666666666666686" height="70"/>
                                         <state key="normal" title="Button" image="10th"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="ypC-w6-QGs"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -242,22 +263,37 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlY-Ee-k4I">
                                         <rect key="frame" x="0.0" y="0.0" width="71.666666666666671" height="70"/>
                                         <state key="normal" title="Button" image="11th"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="hqo-su-yxl"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vL-kK-bCb">
                                         <rect key="frame" x="75.666666666666657" y="0.0" width="71.999999999999972" height="70"/>
                                         <state key="normal" title="Button" image="12th"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="qB8-bx-TOP"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Vz-BH-UjP">
                                         <rect key="frame" x="151.66666666666666" y="0.0" width="71.666666666666686" height="70"/>
                                         <state key="normal" title="Button" image="13th"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="0Xm-qK-ype"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6V-IL-bLE">
                                         <rect key="frame" x="227.33333333333331" y="0.0" width="71.999999999999943" height="70"/>
                                         <state key="normal" title="Button" image="14th"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="Awd-9G-HxC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pt8-b8-YgG">
                                         <rect key="frame" x="303.33333333333326" y="0.0" width="71.666666666666686" height="70"/>
                                         <state key="normal" title="Button" image="15th"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="vQ0-bm-AtX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -271,22 +307,37 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JG-S3-9Sj">
                                         <rect key="frame" x="0.0" y="0.0" width="71.666666666666671" height="70"/>
                                         <state key="normal" title="Button" image="16th"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="hEl-8H-qhJ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3A-qu-lXq">
                                         <rect key="frame" x="75.666666666666657" y="0.0" width="71.999999999999972" height="70"/>
                                         <state key="normal" title="Button" image="17th"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="bw6-l2-6Iw"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRc-1q-IMl">
                                         <rect key="frame" x="151.66666666666666" y="0.0" width="71.666666666666686" height="70"/>
                                         <state key="normal" title="Button" image="18th"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="aSF-3N-umq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKk-za-DtX">
                                         <rect key="frame" x="227.33333333333331" y="0.0" width="71.999999999999943" height="70"/>
                                         <state key="normal" title="Button" image="19th"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="8QD-gV-Bq4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ea6-Gt-Txp">
                                         <rect key="frame" x="303.33333333333326" y="0.0" width="71.666666666666686" height="70"/>
                                         <state key="normal" title="Button" image="20th"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="nPj-Jd-oDF"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -300,22 +351,37 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KR3-Td-obw">
                                         <rect key="frame" x="0.0" y="0.0" width="71.666666666666671" height="70"/>
                                         <state key="normal" title="Button" image="21st"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="EJq-nu-eQS"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPG-Sm-psw">
                                         <rect key="frame" x="75.666666666666657" y="0.0" width="71.999999999999972" height="70"/>
                                         <state key="normal" title="Button" image="22nd"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="WrK-1E-71E"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1N-VT-CRd">
                                         <rect key="frame" x="151.66666666666666" y="0.0" width="71.666666666666686" height="70"/>
                                         <state key="normal" title="Button" image="23rd"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="5lb-HH-GnN"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3n-sx-RgU">
                                         <rect key="frame" x="227.33333333333331" y="0.0" width="71.999999999999943" height="70"/>
                                         <state key="normal" title="Button" image="24th"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="k8v-MF-g0I"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yks-n8-DEh">
                                         <rect key="frame" x="303.33333333333326" y="0.0" width="71.666666666666686" height="70"/>
                                         <state key="normal" title="Button" image="25th"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="W1V-1r-qrC"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -329,22 +395,37 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7V-Lz-lVU">
                                         <rect key="frame" x="0.0" y="0.0" width="71.666666666666671" height="70"/>
                                         <state key="normal" title="Button" image="26th"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="0OS-fE-R5q"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1h-Qw-mP0">
                                         <rect key="frame" x="75.666666666666657" y="0.0" width="71.999999999999972" height="70"/>
                                         <state key="normal" title="Button" image="27th"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="IL8-GC-JpN"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Dc-hS-Bjq">
                                         <rect key="frame" x="151.66666666666666" y="0.0" width="71.666666666666686" height="70"/>
                                         <state key="normal" title="Button" image="28th"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="7GH-ox-sln"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCa-2f-Q68">
                                         <rect key="frame" x="227.33333333333331" y="0.0" width="71.999999999999943" height="70"/>
                                         <state key="normal" title="Button" image="29th"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="iiT-9Q-vTF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFV-zD-vLO">
                                         <rect key="frame" x="303.33333333333326" y="0.0" width="71.666666666666686" height="70"/>
                                         <state key="normal" title="Button" image="30th"/>
+                                        <connections>
+                                            <segue destination="8gI-Tx-S0e" kind="show" id="FQw-BZ-yoq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -359,27 +440,38 @@
                                     <constraint firstAttribute="height" constant="62" id="lxh-ob-S1v"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="31st"/>
+                                <connections>
+                                    <segue destination="8gI-Tx-S0e" kind="show" id="nld-hf-eHh"/>
+                                </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TOa-Mf-1La">
+                                <rect key="frame" x="20" y="41" width="374" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Xzo-FE-DDf" firstAttribute="centerX" secondItem="Akm-fO-df9" secondAttribute="centerX" id="1hP-cO-N31"/>
                             <constraint firstItem="Hp1-4Q-Xa5" firstAttribute="centerX" secondItem="Akm-fO-df9" secondAttribute="centerX" id="45y-fo-RRJ"/>
                             <constraint firstItem="p5r-n6-ti4" firstAttribute="centerX" secondItem="Akm-fO-df9" secondAttribute="centerX" id="6rv-BP-hQ9"/>
+                            <constraint firstItem="TOa-Mf-1La" firstAttribute="leading" secondItem="Akm-fO-df9" secondAttribute="leadingMargin" id="8ur-6g-fXs"/>
                             <constraint firstItem="Juc-LT-YJJ" firstAttribute="centerX" secondItem="Akm-fO-df9" secondAttribute="centerX" id="9Mx-Oi-rlw"/>
                             <constraint firstItem="Xzo-FE-DDf" firstAttribute="top" secondItem="jRc-1q-IMl" secondAttribute="bottom" constant="20" id="CtG-JK-KBL"/>
                             <constraint firstItem="6KL-ke-sYv" firstAttribute="top" secondItem="njp-77-rUD" secondAttribute="bottom" constant="20" id="Ici-Le-rAV"/>
+                            <constraint firstItem="TOa-Mf-1La" firstAttribute="centerX" secondItem="Akm-fO-df9" secondAttribute="centerX" id="Jx8-ac-rcF"/>
                             <constraint firstItem="b1q-KP-9II" firstAttribute="centerX" secondItem="Akm-fO-df9" secondAttribute="centerX" id="NPj-Ff-vXF"/>
                             <constraint firstItem="p5r-n6-ti4" firstAttribute="top" secondItem="CgG-Cm-87s" secondAttribute="bottom" constant="20" id="PsT-8S-Ias"/>
+                            <constraint firstItem="TOa-Mf-1La" firstAttribute="trailing" secondItem="Akm-fO-df9" secondAttribute="trailingMargin" id="QZJ-og-U7c"/>
                             <constraint firstItem="Juc-LT-YJJ" firstAttribute="top" secondItem="b1N-VT-CRd" secondAttribute="bottom" constant="20" id="Tui-dw-ysc"/>
-                            <constraint firstItem="vGL-Zc-VIu" firstAttribute="top" secondItem="mN3-bn-hts" secondAttribute="bottom" constant="10" id="VNE-Zh-vws"/>
-                            <constraint firstItem="vGL-Zc-VIu" firstAttribute="leading" secondItem="Akm-fO-df9" secondAttribute="leadingMargin" id="Wrj-xj-9zJ"/>
+                            <constraint firstItem="njp-77-rUD" firstAttribute="top" secondItem="TOa-Mf-1La" secondAttribute="bottom" constant="27" id="aJR-SI-n0M"/>
                             <constraint firstItem="OQw-Bb-B0X" firstAttribute="top" secondItem="0Vz-BH-UjP" secondAttribute="bottom" constant="20" id="bTw-pR-Xxx"/>
                             <constraint firstItem="OQw-Bb-B0X" firstAttribute="centerX" secondItem="Akm-fO-df9" secondAttribute="centerX" id="eGs-fY-Vhh"/>
                             <constraint firstItem="b1q-KP-9II" firstAttribute="top" secondItem="7Dc-hS-Bjq" secondAttribute="bottom" constant="8" id="hri-BC-5dn"/>
+                            <constraint firstItem="TOa-Mf-1La" firstAttribute="top" secondItem="mN3-bn-hts" secondAttribute="bottom" constant="21" id="iYh-UC-LK8"/>
                             <constraint firstItem="6KL-ke-sYv" firstAttribute="centerX" secondItem="Akm-fO-df9" secondAttribute="centerX" id="lpu-DA-BgW"/>
-                            <constraint firstItem="Hp1-4Q-Xa5" firstAttribute="top" secondItem="vGL-Zc-VIu" secondAttribute="bottom" constant="15" id="r4p-fM-ubY"/>
-                            <constraint firstItem="vGL-Zc-VIu" firstAttribute="trailing" secondItem="Akm-fO-df9" secondAttribute="trailingMargin" id="sZP-i5-hCf"/>
                         </constraints>
                     </view>
                     <connections>
@@ -391,7 +483,7 @@
                         <outlet property="first" destination="ywq-qO-ACv" id="LNN-jz-guG"/>
                         <outlet property="fourteenth" destination="Z6V-IL-bLE" id="6it-jS-CzY"/>
                         <outlet property="fourth" destination="ifd-Ep-Fgi" id="PpF-Sn-FhH"/>
-                        <outlet property="month" destination="vGL-Zc-VIu" id="tdz-Vm-MjA"/>
+                        <outlet property="monthOption" destination="TOa-Mf-1La" id="uTh-WS-iov"/>
                         <outlet property="ninteenth" destination="zKk-za-DtX" id="7lm-di-BBJ"/>
                         <outlet property="ninth" destination="Bv1-w7-1Fr" id="tm1-QN-XRW"/>
                         <outlet property="second" destination="vyj-dL-UHa" id="7MA-QE-Qnk"/>
@@ -432,12 +524,21 @@
                     <view key="view" contentMode="scaleToFill" id="J7v-cg-7wI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nr7-GV-g8a">
+                                <rect key="frame" x="101" y="100" width="195" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIX-F8-iAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2804" y="919"/>
+            <point key="canvasLocation" x="2802.898550724638" y="918.75000000000011"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Sgm-WL-eVX">
@@ -552,4 +653,7 @@
         <image name="9th" width="128" height="128"/>
         <image name="headPic" width="770" height="410"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ypC-w6-QGs"/>
+    </inferredMetricsTieBreakers>
 </document>

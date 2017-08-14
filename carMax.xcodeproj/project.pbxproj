@@ -18,6 +18,7 @@
 		66C9B4161F2A73F900CFE686 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C9B4141F2A73BC00CFE686 /* Security.framework */; };
 		66C9B4691F2A761400CFE686 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C9B4681F2A761400CFE686 /* KeychainItemWrapper.m */; };
 		66DC00EF1F2A793D002F04B8 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66DC00EE1F2A793D002F04B8 /* ScheduleViewController.m */; };
+		66E324DD1F41E73F00DAE030 /* Appdata.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E324DC1F41E73F00DAE030 /* Appdata.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		66C9B4681F2A761400CFE686 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		66DC00ED1F2A7920002F04B8 /* ScheduleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
 		66DC00EE1F2A793D002F04B8 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
+		66E324DB1F41E72500DAE030 /* Appdata.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Appdata.h; sourceTree = "<group>"; };
+		66E324DC1F41E73F00DAE030 /* Appdata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appdata.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				661330241F1E988E004DFE24 /* LoginViewController.m */,
 				66DC00ED1F2A7920002F04B8 /* ScheduleViewController.h */,
 				66DC00EE1F2A793D002F04B8 /* ScheduleViewController.m */,
+				66E324DB1F41E72500DAE030 /* Appdata.h */,
+				66E324DC1F41E73F00DAE030 /* Appdata.m */,
 				66C9B4671F2A761400CFE686 /* KeychainItemWrapper.h */,
 				66C9B4681F2A761400CFE686 /* KeychainItemWrapper.m */,
 				661330191F1E73A2004DFE24 /* Assets.xcassets */,
@@ -190,6 +195,7 @@
 				6613300F1F1E73A2004DFE24 /* main.m in Sources */,
 				66DC00EF1F2A793D002F04B8 /* ScheduleViewController.m in Sources */,
 				66C9B4121F2A4D8100CFE686 /* SignupViewController.m in Sources */,
+				66E324DD1F41E73F00DAE030 /* Appdata.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
