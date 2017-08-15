@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ScheduleViewController.h"
+#import "Appdata.h"
 
 
 @interface ScheduleViewController ()
@@ -44,6 +45,38 @@
 @property (weak, nonatomic) IBOutlet UIButton *twentyNinth;
 @property (weak, nonatomic) IBOutlet UIButton *thirtyth;
 @property (weak, nonatomic) IBOutlet UIButton *thirtyFirst;
+- (IBAction)pressOne:(id)sender;
+- (IBAction)pressTwo:(id)sender;
+- (IBAction)pressThree:(id)sender;
+- (IBAction)pressFour:(id)sender;
+- (IBAction)pressFive:(id)sender;
+- (IBAction)pressSix:(id)sender;
+- (IBAction)pressSeven:(id)sender;
+- (IBAction)pressEight:(id)sender;
+- (IBAction)pressNine:(id)sender;
+- (IBAction)pressTen:(id)sender;
+- (IBAction)pressEleven:(id)sender;
+- (IBAction)pressTwelve:(id)sender;
+- (IBAction)pressThirteen:(id)sender;
+- (IBAction)pressFourteen:(id)sender;
+- (IBAction)pressFifteen:(id)sender;
+- (IBAction)pressSixteen:(id)sender;
+- (IBAction)pressSeventeen:(id)sender;
+- (IBAction)pressEighteen:(id)sender;
+- (IBAction)pressNinteen:(id)sender;
+- (IBAction)pressTwenty:(id)sender;
+- (IBAction)pressTwentyOne:(id)sender;
+- (IBAction)pressTwentyTwo:(id)sender;
+- (IBAction)pressTwentyThree:(id)sender;
+- (IBAction)pressTwentyFour:(id)sender;
+- (IBAction)pressTwentyFive:(id)sender;
+- (IBAction)pressTwentySix:(id)sender;
+- (IBAction)pressTwentySeven:(id)sender;
+- (IBAction)pressTwentyEight:(id)sender;
+- (IBAction)pressTwentyNine:(id)sender;
+- (IBAction)pressThirty:(id)sender;
+- (IBAction)pressThirtyOne:(id)sender;
+
 @property NSArray *dateArray;
 @property NSInteger day;
 @property NSInteger month;
@@ -169,4 +202,132 @@
 
 
 
+- (IBAction)pressOne:(id)sender {
+    [self setAppdata:@"1"];
+}
+
+- (IBAction)pressTwo:(id)sender {
+    [self setAppdata:@"2"];
+}
+
+- (IBAction)pressThree:(id)sender {
+    [self setAppdata:@"3"];
+}
+
+- (IBAction)pressFour:(id)sender {
+    [self setAppdata:@"4"];
+}
+
+- (IBAction)pressFive:(id)sender {
+    [self setAppdata:@"5"];
+}
+
+- (IBAction)pressSix:(id)sender {
+    [self setAppdata:@"6"];
+}
+
+- (IBAction)pressSeven:(id)sender {
+    [self setAppdata:@"7"];
+}
+
+- (IBAction)pressEight:(id)sender {
+    [self setAppdata:@"8"];
+}
+
+- (IBAction)pressNine:(id)sender {
+    [self setAppdata:@"9"];
+}
+
+- (IBAction)pressTen:(id)sender {
+    [self setAppdata:@"10"];
+}
+
+- (IBAction)pressEleven:(id)sender {
+    [self setAppdata:@"11"];
+}
+
+- (IBAction)pressTwelve:(id)sender {
+    [self setAppdata:@"12"];
+}
+
+- (IBAction)pressThirteen:(id)sender {
+    [self setAppdata:@"13"];
+}
+
+- (IBAction)pressFourteen:(id)sender {
+    [self setAppdata:@"14"];
+}
+
+- (IBAction)pressFifteen:(id)sender {
+    [self setAppdata:@"15"];
+}
+
+- (IBAction)pressSixteen:(id)sender {
+    [self setAppdata:@"16"];
+}
+
+- (IBAction)pressSeventeen:(id)sender {
+    [self setAppdata:@"17"];
+}
+
+- (IBAction)pressEighteen:(id)sender {
+    [self setAppdata:@"18"];
+}
+
+- (IBAction)pressNinteen:(id)sender {
+    [self setAppdata:@"19"];
+}
+
+- (IBAction)pressTwenty:(id)sender {
+    [self setAppdata:@"20"];
+}
+
+- (IBAction)pressTwentyOne:(id)sender {
+    [self setAppdata:@"21"];
+}
+
+- (IBAction)pressTwentyTwo:(id)sender {
+    [self setAppdata:@"22"];
+}
+- (IBAction)pressTwentyThree:(id)sender {
+    [self setAppdata:@"23"];
+}
+
+- (IBAction)pressTwentyFour:(id)sender {
+    [self setAppdata:@"24"];
+}
+
+- (IBAction)pressTwentyFive:(id)sender {
+    [self setAppdata:@"25"];
+}
+
+- (IBAction)pressTwentySix:(id)sender {
+    [self setAppdata:@"26"];
+}
+
+- (IBAction)pressTwentySeven:(id)sender {
+    [self setAppdata:@"27"];
+}
+
+- (IBAction)pressTwentyEight:(id)sender {
+    [self setAppdata:@"28"];
+}
+
+- (IBAction)pressTwentyNine:(id)sender {
+    [self setAppdata:@"29"];
+}
+
+- (IBAction)pressThirty:(id)sender {
+    [self setAppdata:@"30"];
+}
+
+- (IBAction)pressThirtyOne:(id)sender {
+    [self setAppdata:@"31"];
+}
+
+- (void)setAppdata: (NSString *)day{
+    [AppData sharedData].currentMonth = [self.monthOption titleForSegmentAtIndex:self.monthOption.selectedSegmentIndex];
+    [AppData sharedData].currentDay = day;
+
+}
 @end
