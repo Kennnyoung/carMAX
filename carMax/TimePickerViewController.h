@@ -15,7 +15,7 @@
 #endif /* TimePickerViewController_h */
 
 
-@interface TimePickerViewController : UIViewController
+@interface TimePickerViewController : UIViewController <UITextFieldDelegate>
 
 
 @end
