@@ -149,9 +149,9 @@
                 NSUserDefaults *userStatus = [NSUserDefaults standardUserDefaults];
                 
                 if (row){
-                    [userStatus setObject:@"passenger" forKey:[_userName.text stringByAppendingString:@" status"]];
+                    [userStatus setObject:@"passenger" forKey:[_userName.text stringByAppendingString:@"status"]];
                 }else{
-                    [userStatus setObject:@"driver" forKey:[_userName.text stringByAppendingString:@" status"]];
+                    [userStatus setObject:@"driver" forKey:[_userName.text stringByAppendingString:@"status"]];
                 }
                 LoginViewController *lvc = [self.storyboard instantiateViewControllerWithIdentifier:@"login"];
                 

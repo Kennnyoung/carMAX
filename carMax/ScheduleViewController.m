@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "ScheduleViewController.h"
+#import "TimePickerViewController.h"
+#import "DriverPickerViewController.h"
 #import "Appdata.h"
 
 
@@ -104,6 +106,11 @@
         case 2:
             [self.monthOption setTitle:@"February" forSegmentAtIndex:0];
             [self.monthOption setTitle:@"March" forSegmentAtIndex:1];
+            if (self.year % 4 != 0){
+                self.twentyNinth.hidden = YES;
+            }
+            self.thirtyth.hidden = YES;
+            self.thirtyFirst.hidden = YES;
             break;
         case 3:
             [self.monthOption setTitle:@"March" forSegmentAtIndex:0];
@@ -112,6 +119,7 @@
         case 4:
             [self.monthOption setTitle:@"April" forSegmentAtIndex:0];
             [self.monthOption setTitle:@"May" forSegmentAtIndex:1];
+            self.thirtyFirst.hidden = YES;
             break;
         case 5:
             [self.monthOption setTitle:@"May" forSegmentAtIndex:0];
@@ -120,6 +128,7 @@
         case 6:
             [self.monthOption setTitle:@"June" forSegmentAtIndex:0];
             [self.monthOption setTitle:@"July" forSegmentAtIndex:1];
+            self.thirtyFirst.hidden = YES;
             break;
         case 7:
             [self.monthOption setTitle:@"July" forSegmentAtIndex:0];
@@ -132,6 +141,7 @@
         case 9:
             [self.monthOption setTitle:@"September" forSegmentAtIndex:0];
             [self.monthOption setTitle:@"October" forSegmentAtIndex:1];
+            self.thirtyFirst.hidden = YES;
             break;
         case 10:
             [self.monthOption setTitle:@"October" forSegmentAtIndex:0];
@@ -140,6 +150,7 @@
         case 11:
             [self.monthOption setTitle:@"November" forSegmentAtIndex:0];
             [self.monthOption setTitle:@"December" forSegmentAtIndex:1];
+            self.thirtyFirst.hidden = YES;
             break;
         case 12:
             [self.monthOption setTitle:@"December" forSegmentAtIndex:0];
@@ -328,6 +339,15 @@
 - (void)setAppdata: (NSString *)day{
     [AppData sharedData].currentMonth = [self.monthOption titleForSegmentAtIndex:self.monthOption.selectedSegmentIndex];
     [AppData sharedData].currentDay = day;
-
+    
+    NSString *userStatus = [[NSUserDefaults standardUserDefaults] objectForKey:[[AppData sharedData].currentUser stringByAppendingString:@"status"]];
+    
+    if ([userStatus isEqualToString:@"driver"]){
+        DriverPickerViewController *dpvc = [self.storyboard instantiateViewControllerWithIdentifier:@"dpvc"];
+        [self.navigationController pushViewController:dpvc animated:YES];
+    }else if ([userStatus isEqualToString:@"passenger"]){
+        TimePickerViewController *tpvc = [self.storyboard instantiateViewControllerWithIdentifier:@"tpvc"];
+        [self.navigationController pushViewController:tpvc animated:YES];
+    }
 }
 @end

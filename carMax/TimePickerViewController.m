@@ -18,6 +18,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *rate;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 - (IBAction)saveInfo:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *negYes;
+- (IBAction)yes:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *negNo;
+- (IBAction)no:(id)sender;
 
 @end
 
@@ -47,6 +51,13 @@
                                              selector:@selector(keyboardWillHide:)
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
+    
+    [self.negYes.layer setShadowOffset:CGSizeMake(0, 0)];
+    [self.negYes.layer setShadowColor:[[UIColor blackColor] CGColor]];
+    [self.negYes.layer setShadowOpacity:0.5];
+    [self.negNo.layer setShadowOffset:CGSizeMake(0, 0)];
+    [self.negNo.layer setShadowColor:[[UIColor blackColor] CGColor]];
+    [self.negNo.layer setShadowOpacity:0.5];
 }
 
 
@@ -83,6 +94,26 @@
         [alert addAction:defaultAction];
         [self presentViewController:alert animated:YES completion:nil];
     }else{
+        
+        NSUserDefaults *users = [NSUserDefaults standardUserDefaults];
+        
+        NSArray *availableDrivers = [users objectForKey:[[AppData sharedData].currentMonth stringByAppendingString:[AppData sharedData].currentDay]];
+        
+        if (availableDrivers){
+            [availableDrivers arrayByAddingObject:[AppData sharedData].currentUser];
+            
+        }else{
+            availableDrivers = [[NSArray alloc] initWithObjects: [AppData sharedData]
+                                .currentUser, nil];
+        }
+        
+        [users setObject:availableDrivers forKey:[[AppData sharedData].currentMonth stringByAppendingString:[AppData sharedData].currentDay]];
+        
+        NSArray *info = [[NSArray alloc] initWithObjects: _carBrand.text, _carModel.text, _driverAvailability.text, _rate.text, nil];
+        
+        NSUserDefaults *userInfo = [NSUserDefaults standardUserDefaults];
+        
+        [userInfo setObject:info forKey:[[[AppData sharedData].currentUser stringByAppendingString:[AppData sharedData].currentMonth] stringByAppendingString:[AppData sharedData].currentDay]];
         
         ScheduleViewController *svc = [self.storyboard instantiateViewControllerWithIdentifier:@"SVC"];
         
@@ -121,5 +152,13 @@
     UIEdgeInsets contentInsets = UIEdgeInsetsZero;
     self.scrollView.contentInset = contentInsets;
     self.scrollView.scrollIndicatorInsets = contentInsets;
+}
+- (IBAction)yes:(id)sender {
+    self.negYes.backgroundColor = [UIColor cyanColor];
+    self.negNo.backgroundColor = [UIColor whiteColor];
+}
+- (IBAction)no:(id)sender {
+    self.negNo.backgroundColor = [UIColor cyanColor];
+    self.negYes.backgroundColor = [UIColor whiteColor];
 }
 @end

@@ -14,6 +14,8 @@
 		6613301A1F1E73A2004DFE24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 661330191F1E73A2004DFE24 /* Assets.xcassets */; };
 		6613301D1F1E73A2004DFE24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6613301B1F1E73A2004DFE24 /* LaunchScreen.storyboard */; };
 		661330251F1E988E004DFE24 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 661330241F1E988E004DFE24 /* LoginViewController.m */; };
+		669EB71D1F45F94F00EE90B6 /* DriverPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 669EB71C1F45F94F00EE90B6 /* DriverPickerViewController.m */; };
+		669EB7201F45F99100EE90B6 /* DriverInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 669EB71F1F45F99100EE90B6 /* DriverInfoCell.m */; };
 		66C9B4121F2A4D8100CFE686 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C9B4111F2A4D8100CFE686 /* SignupViewController.m */; };
 		66C9B4161F2A73F900CFE686 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C9B4141F2A73BC00CFE686 /* Security.framework */; };
 		66C9B4691F2A761400CFE686 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C9B4681F2A761400CFE686 /* KeychainItemWrapper.m */; };
@@ -35,6 +37,10 @@
 		6613301E1F1E73A2004DFE24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		661330241F1E988E004DFE24 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		661330261F1E98A7004DFE24 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		669EB71B1F45F94F00EE90B6 /* DriverPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriverPickerViewController.h; sourceTree = "<group>"; };
+		669EB71C1F45F94F00EE90B6 /* DriverPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriverPickerViewController.m; sourceTree = "<group>"; };
+		669EB71E1F45F99100EE90B6 /* DriverInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriverInfoCell.h; sourceTree = "<group>"; };
+		669EB71F1F45F99100EE90B6 /* DriverInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriverInfoCell.m; sourceTree = "<group>"; };
 		66C9B4101F2A4D6800CFE686 /* SignupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
 		66C9B4111F2A4D8100CFE686 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
 		66C9B4141F2A73BC00CFE686 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -82,21 +88,10 @@
 			children = (
 				661330101F1E73A2004DFE24 /* AppDelegate.h */,
 				661330111F1E73A2004DFE24 /* AppDelegate.m */,
-				661330131F1E73A2004DFE24 /* ViewController.h */,
-				661330141F1E73A2004DFE24 /* ViewController.m */,
+				667AA1C61F6ABD2C00BD84BC /* Models */,
+				667AA1C51F6ABD0600BD84BC /* Views */,
+				667AA1C41F6ABCE300BD84BC /* View Controllers */,
 				661330161F1E73A2004DFE24 /* Main.storyboard */,
-				66C9B4101F2A4D6800CFE686 /* SignupViewController.h */,
-				66C9B4111F2A4D8100CFE686 /* SignupViewController.m */,
-				66E324DE1F4242E000DAE030 /* TimePickerViewController.h */,
-				66E324DF1F4242F100DAE030 /* TimePickerViewController.m */,
-				661330261F1E98A7004DFE24 /* LoginViewController.h */,
-				661330241F1E988E004DFE24 /* LoginViewController.m */,
-				66DC00ED1F2A7920002F04B8 /* ScheduleViewController.h */,
-				66DC00EE1F2A793D002F04B8 /* ScheduleViewController.m */,
-				66E324DB1F41E72500DAE030 /* Appdata.h */,
-				66E324DC1F41E73F00DAE030 /* Appdata.m */,
-				66C9B4671F2A761400CFE686 /* KeychainItemWrapper.h */,
-				66C9B4681F2A761400CFE686 /* KeychainItemWrapper.m */,
 				661330191F1E73A2004DFE24 /* Assets.xcassets */,
 				6613301B1F1E73A2004DFE24 /* LaunchScreen.storyboard */,
 				6613301E1F1E73A2004DFE24 /* Info.plist */,
@@ -111,6 +106,45 @@
 				6613300E1F1E73A2004DFE24 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		667AA1C41F6ABCE300BD84BC /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				661330131F1E73A2004DFE24 /* ViewController.h */,
+				661330141F1E73A2004DFE24 /* ViewController.m */,
+				66C9B4101F2A4D6800CFE686 /* SignupViewController.h */,
+				66C9B4111F2A4D8100CFE686 /* SignupViewController.m */,
+				661330261F1E98A7004DFE24 /* LoginViewController.h */,
+				661330241F1E988E004DFE24 /* LoginViewController.m */,
+				66E324DE1F4242E000DAE030 /* TimePickerViewController.h */,
+				66E324DF1F4242F100DAE030 /* TimePickerViewController.m */,
+				669EB71B1F45F94F00EE90B6 /* DriverPickerViewController.h */,
+				669EB71C1F45F94F00EE90B6 /* DriverPickerViewController.m */,
+				66DC00ED1F2A7920002F04B8 /* ScheduleViewController.h */,
+				66DC00EE1F2A793D002F04B8 /* ScheduleViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		667AA1C51F6ABD0600BD84BC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				669EB71F1F45F99100EE90B6 /* DriverInfoCell.m */,
+				669EB71E1F45F99100EE90B6 /* DriverInfoCell.h */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		667AA1C61F6ABD2C00BD84BC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				66E324DB1F41E72500DAE030 /* Appdata.h */,
+				66E324DC1F41E73F00DAE030 /* Appdata.m */,
+				66C9B4671F2A761400CFE686 /* KeychainItemWrapper.h */,
+				66C9B4681F2A761400CFE686 /* KeychainItemWrapper.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		66C9B4131F2A73BC00CFE686 /* Frameworks */ = {
@@ -194,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				661330251F1E988E004DFE24 /* LoginViewController.m in Sources */,
+				669EB7201F45F99100EE90B6 /* DriverInfoCell.m in Sources */,
 				661330151F1E73A2004DFE24 /* ViewController.m in Sources */,
 				66C9B4691F2A761400CFE686 /* KeychainItemWrapper.m in Sources */,
 				66E324E01F4242F100DAE030 /* TimePickerViewController.m in Sources */,
@@ -201,6 +236,7 @@
 				6613300F1F1E73A2004DFE24 /* main.m in Sources */,
 				66DC00EF1F2A793D002F04B8 /* ScheduleViewController.m in Sources */,
 				66C9B4121F2A4D8100CFE686 /* SignupViewController.m in Sources */,
+				669EB71D1F45F94F00EE90B6 /* DriverPickerViewController.m in Sources */,
 				66E324DD1F41E73F00DAE030 /* Appdata.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
